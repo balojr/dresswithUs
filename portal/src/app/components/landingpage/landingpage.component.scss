@@ -25,6 +25,12 @@
     margin-top: 8px;
 }
 
+.dealsnconnect {
+    display: flex;
+    flex-direction: row;
+    margin-top: 20px;
+}
+
 .todays-deal {
     display: block;
     border-radius: 5px;
@@ -35,7 +41,7 @@
 }
 
 .todays-deal .deal-text {
-    // padding-top: 10px;
+    padding-top: 10px;
     // margin-top: 10px;
     // text-align: center;
     font-family: 'Inter', sans-serif;
@@ -43,9 +49,13 @@
     font-size: 20px;
 }
 
+.todays-deal .deal-text span {
+    margin-left: 10px;
+}
+
 .todays-deal a {
     text-decoration: none;
-    margin-left: 10px;
+    color: #000000;
 }
 
 .deal-image {
