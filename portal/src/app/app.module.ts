@@ -9,17 +9,23 @@ import { MatIconModule } from '@angular/material/icon';
 import { AppComponent } from './app.component';
 import { LandingpageComponent } from './components/landingpage/landingpage.component';
 import { OffersComponent } from './components/offers/offers.component';
+import { ShopComponent } from './components/shop/shop.component';
+import { ButtonComponent } from './components/button/button.component';
 
 
 const appRoutes: Routes = [
   { path: '', component: LandingpageComponent },
   { path: 'offers', component: OffersComponent },
+  { path: 'shop', component: ShopComponent },
+  { path: 'button', component: ButtonComponent }
 ];
 @NgModule({
   declarations: [
     AppComponent,
     LandingpageComponent,
-    OffersComponent
+    OffersComponent,
+    ShopComponent,
+    ButtonComponent
   ],
   imports: [
     BrowserModule,

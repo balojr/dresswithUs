@@ -1,0 +1,31 @@
+.gotoshop {
+    // text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.gotoshop a {
+    text-decoration: none;
+}
+
+.gotoshop a span {
+    color: #ffffff;
+    font-size: 24px;
+}
+
+button {
+    background-color: #010E02;
+    width: 300px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    border: none;
+    i.fas {
+        color: #ffffff;
+        font-size: 30px;
+        margin-left: 10px;
+    }
+}
