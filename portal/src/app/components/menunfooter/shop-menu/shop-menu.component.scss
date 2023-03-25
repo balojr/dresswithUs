@@ -34,3 +34,42 @@
     border-radius: 5px;
     padding: 3px;
 }
+
+// middle bar
+.menu .middlebar {
+    height: 6vh;
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+    .leftside {
+        display: flex;
+        justify-content: space-between;
+        width: 40%;
+        .left {
+            margin-left: 50px;
+            font-size: 20px;
+            font-family: 'Inter', sans-serif;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+        }
+        .right {
+            display: flex;
+            .link {
+                text-decoration: none;
+                display: flex;
+                align-items: center;
+                font-size: 15px;
+                font-family: 'Inter', sans-serif;
+                font-weight: 600;
+                margin-right: 15px;
+                .text {
+                    color: #000000;
+                }
+            }
+            .link:last-child {
+                margin-right: 0;
+            }
+        }
+    }
+}
