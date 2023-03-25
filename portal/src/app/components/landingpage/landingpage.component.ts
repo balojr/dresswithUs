@@ -8,8 +8,8 @@ import { Component, OnInit } from '@angular/core';
 export class LandingpageComponent implements OnInit {
   offersImage = [
     'assets/images/hoodie1.webp',
-    'assets/images/hoodie2.webp',
-    'assets/images/hoodie3.webp',
+    'assets/images/tee1.webp',
+    'assets/images/clava1.webp',
   ];
 
   constructor() {}
