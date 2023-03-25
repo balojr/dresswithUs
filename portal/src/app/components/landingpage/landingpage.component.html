@@ -1,0 +1,19 @@
+<div class="landing-title">
+    <span>Off The Shelves</span>
+</div>
+
+<div class="description">
+    <span>Your Ultimate<br> Dressing and<br> Shopping Partner</span>
+</div>
+
+<div class="todays-deal">
+    <a routerLink="/offers">
+        <div class="deal-text">
+            <span>Today's Offer/s</span>
+        </div>
+
+        <div class="deal-image">
+            <img *ngFor="let offersImage of offersImage" class="image" [src]="offersImage" alt="Offers Today">
+        </div>
+    </a>
+</div>
