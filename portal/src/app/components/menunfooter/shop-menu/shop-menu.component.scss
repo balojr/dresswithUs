@@ -1,0 +1,36 @@
+.menu .topbar {
+    background: #070814;
+    color: #ffffff;
+    display: flex;
+    justify-content: space-between;
+    height: 10vh;
+    align-items: center;
+}
+
+.menu .topbar .leftside {
+    margin-left: 50px;
+}
+
+.menu .topbar .leftside span {
+    font-size: 25px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+}
+
+.menu .topbar .rightside {
+    margin-right: 60px;
+}
+
+.menu .topbar .rightside i.fas {
+    font-size: 20px;
+    margin: 0 20px;
+}
+
+.menu .topbar .rightside span {
+    font-size: 17px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+    border: #ffffff 1px solid;
+    border-radius: 5px;
+    padding: 3px;
+}

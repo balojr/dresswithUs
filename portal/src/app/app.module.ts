@@ -11,6 +11,7 @@ import { LandingpageComponent } from './components/landingpage/landingpage.compo
 import { OffersComponent } from './components/offers/offers.component';
 import { ShopComponent } from './components/shop/shop.component';
 import { ButtonComponent } from './components/button/button.component';
+import { ShopMenuComponent } from './components/menunfooter/shop-menu/shop-menu.component';
 
 
 const appRoutes: Routes = [
@@ -25,7 +26,8 @@ const appRoutes: Routes = [
     LandingpageComponent,
     OffersComponent,
     ShopComponent,
-    ButtonComponent
+    ButtonComponent,
+    ShopMenuComponent
   ],
   imports: [
     BrowserModule,
