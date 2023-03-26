@@ -1,7 +1,10 @@
 <div class="menu">
     <div class="topbar">
         <div class="leftside">
-            <span>Off the shelves</span>
+            <a routerLink="">
+                <span>Off the shelves</span>
+            </a>
+
         </div>
         <div class="rightside">
             <i class="fas fa-map-marker-alt"></i>
@@ -26,6 +29,43 @@
                 </a>
             </div>
         </div>
-
+        <div class="rightside">
+            <div class="search">
+                <input type="text" placeholder="Search" maxlength="15">
+                <i class="fas fa-search"></i>
+            </div>
+            <div class="cart">
+                <a routerLink='/cart'>
+                    <i class="fas fa-shopping-cart"></i>
+                    <span class="count">{{ cartCount }}</span>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="bottombar">
+        <a routerLink='/men'>
+            <span>New In</span>
+        </a>
+        <a routerLink='/men'>
+            <span>Hoodies</span>
+        </a>
+        <a routerLink='/men'>
+            <span>Tees</span>
+        </a>
+        <a routerLink='/men'>
+            <span>Pants</span>
+        </a>
+        <a routerLink='/men'>
+            <span>Shoes</span>
+        </a>
+        <a routerLink='/men'>
+            <span>OTS Essentials</span>
+        </a>
+        <a routerLink='/men'>
+            <span>Accessories</span>
+        </a>
+        <a routerLink='/men'>
+            <span>Plus</span>
+        </a>
     </div>
 </div>
