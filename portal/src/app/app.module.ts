@@ -15,6 +15,7 @@ import { ShopMenuComponent } from './components/menunfooter/shop-menu/shop-menu.
 import { MenComponent } from './components/gender/men/men.component';
 import { WomenComponent } from './components/gender/women/women.component';
 import { KidsComponent } from './components/gender/kids/kids.component';
+import { CartcounterComponent } from './components/cart/cartcounter/cartcounter.component';
 
 
 const appRoutes: Routes = [
@@ -24,7 +25,8 @@ const appRoutes: Routes = [
   { path: 'button', component: ButtonComponent },
   { path : 'men', component: MenComponent },
   { path : 'women', component: WomenComponent },
-  { path : 'kids', component: KidsComponent }
+  { path : 'kids', component: KidsComponent },
+  { path : 'cart', component: CartcounterComponent }
 ];
 @NgModule({
   declarations: [
@@ -36,7 +38,8 @@ const appRoutes: Routes = [
     ShopMenuComponent,
     MenComponent,
     WomenComponent,
-    KidsComponent
+    KidsComponent,
+    CartcounterComponent
   ],
   imports: [
     BrowserModule,
