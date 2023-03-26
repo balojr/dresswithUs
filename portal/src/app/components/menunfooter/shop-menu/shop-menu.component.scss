@@ -112,12 +112,24 @@
         .cart {
             display: flex;
             align-items: center;
+            a {
+                text-decoration: none;
+                color: #000000;
+            }
             i {
-                font-size: 20px;
+                font-size: 25px;
                 margin-left: 5px;
             }
             span {
-                margin-right: 80px;
+                margin-right: 70px;
+                color: #ffffff;
+                font-size: 12px;
+                font-weight: bold;
+                padding: 4px;
+                border-radius: 50%;
+                position: relative;
+                top: -10px;
+                left: -18px;
             }
         }
     }
