@@ -16,6 +16,7 @@ import { MenComponent } from './components/gender/men/men.component';
 import { WomenComponent } from './components/gender/women/women.component';
 import { KidsComponent } from './components/gender/kids/kids.component';
 import { CartcounterComponent } from './components/cart/cartcounter/cartcounter.component';
+import { ShopBodyComponent } from './components/shop-body/shop-body.component';
 
 
 const appRoutes: Routes = [
@@ -39,7 +40,8 @@ const appRoutes: Routes = [
     MenComponent,
     WomenComponent,
     KidsComponent,
-    CartcounterComponent
+    CartcounterComponent,
+    ShopBodyComponent
   ],
   imports: [
     BrowserModule,
