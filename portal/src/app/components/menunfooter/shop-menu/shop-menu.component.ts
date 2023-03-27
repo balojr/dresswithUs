@@ -10,6 +10,7 @@ import { Component } from '@angular/core';
 })
 export class ShopMenuComponent {
   cartCount = 0;
+  hangerCart = "/../../assets/images/hanger-two.svg"
   cartItems = [
     // array of items in the cart
   ];
