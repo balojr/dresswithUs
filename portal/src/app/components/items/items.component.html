@@ -1,1 +1,5 @@
-<p>items works!</p>
+<div class="viewitem" *ngFor="let item of items">
+    <button class="btn btn-view" [routerLink]="['/item', items.id]">
+        View
+    </button>
+</div>
