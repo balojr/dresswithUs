@@ -1,0 +1,11 @@
+<div class="cart-items-container">
+    <div *ngIf="items.length === 0">No items in cart.</div>
+    <div *ngFor="let item of items" class="cart-item">
+        <img [src]="item.itemImage" alt="{{ item.itemName }}" class="cart-item-image">
+        <div class="cart-item-details">
+            <div class="cart-item-name">{{ item.itemName }}</div>
+            <div class="cart-item-price">{{ item.itemPrice }}</div>
+        </div>
+    </div>
+</div>
+<button *ngIf="items.length > 0" (click)="clearCart()">Clear Cart</button>
