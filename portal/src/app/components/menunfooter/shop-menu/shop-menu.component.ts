@@ -9,9 +9,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./shop-menu.component.scss']
 })
 export class ShopMenuComponent {
-  cartCount = 0;
   hangerCart = "/../../assets/images/hanger-two.svg"
-  cartItems = [
-    // array of items in the cart
-  ];
+  
 }
