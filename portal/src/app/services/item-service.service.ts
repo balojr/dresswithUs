@@ -1,8 +1,9 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
+import { Observable, catchError, of } from 'rxjs';
 import { environment } from 'src/environments/environment';
 import { ItemData } from '../models/item-model';
+import { Item } from '../item';
 
 @Injectable({
   providedIn: 'root'
@@ -10,18 +11,18 @@ import { ItemData } from '../models/item-model';
 export class ItemService {
   constructor( private httpClient: HttpClient) { }
 
-  private baseUrl = environment.API_ENDPOINT + "/api"
+  private itemsUrl = 'api/items';
 
-  getOneItem(id: number): Observable<any> {
-    return this.httpClient.get<any>(this.baseUrl + '/item/' + id, {
-      // params: options,
-      observe: 'response',
-    });
+  getItems(): Observable<Item[]> {
+    return this.httpClient.get<Item[]>(this.itemsUrl).pipe(
+      catchError(this.handleError<Item[]>('getItems', []))
+    );
   }
-  getAllItems(options: any): Observable<any> {
-    return this.httpClient.get<any>(this.baseUrl + '/item', {
-      params: options,
-      observe: 'response',
-    });
+
+  private handleError<T>(operation = 'operation', result?: T) {
+    return (error: any): Observable<T> => {
+      console.error(error);
+      return of(result as T);
+    };
   }
 }
