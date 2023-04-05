@@ -18,12 +18,19 @@ export class ItemsComponent  implements OnInit{
   }
   viewItem(id: number) {
     const options = {
-      //  page: 1,
-      //  per_page: 10,
-      //  home_id: this.patientId,
     };
     this.itemService.getOneItem(id).subscribe((res: any) => {
       console.log('item=>', res.body.data);
+      this.items = res.body.data;
+
+    })
+  }
+  viewItems() {
+    const options = {
+      
+    };
+    this.itemService.getAllItems(options).subscribe((res: any) => {
+      console.log('items=>', res.body.data);
       this.items = res.body.data;
 
     })
