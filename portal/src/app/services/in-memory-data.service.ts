@@ -20,6 +20,7 @@ export class InMemoryDataService implements InMemoryDbService {
       { id: 7, itemName: 'Tee 3 Printed', itemPrice: 'Ksh 2200', itemImage: '/assets/images/tee3.webp' },
       { id: 8, itemName: 'Tee 4 Printed', itemPrice: 'Ksh 2300', itemImage: '/assets/images/tee4.webp' },
       { id: 5, itemName: 'Tee 1 Printed', itemPrice: 'Ksh 2000', itemImage: '/assets/images/tee1.webp' },
+      { id: 12, itemName: 'Tee 5 Printed', itemPrice: 'Ksh 2100', itemImage: '/assets/images/tee5.webp' },
       
     ];
     return {items};

@@ -22,6 +22,7 @@ import { CartcounterComponent } from './components/cart/cartcounter/cartcounter.
 import { ShopBodyComponent } from './components/shop-body/shop-body.component';
 import { ItemsComponent } from './components/items/items.component';
 import { HttpClientModule } from '@angular/common/http';
+import { ShopFooterComponent } from './components/menunfooter/shop-footer/shop-footer.component';
 
 
 const appRoutes: Routes = [
@@ -48,7 +49,8 @@ const appRoutes: Routes = [
     KidsComponent,
     CartcounterComponent,
     ShopBodyComponent,
-    ItemsComponent
+    ItemsComponent,
+    ShopFooterComponent
   ],
   imports: [
     BrowserModule,
