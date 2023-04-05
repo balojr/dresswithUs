@@ -1,5 +1,8 @@
-<div class="viewitem" *ngFor="let item of items">
-    <button class="btn btn-view" [routerLink]="['/item', items.id]">
-        View
-    </button>
+<div class="itemcontainer">
+    <div class="item" *ngFor="let item of items">
+        <img [src]="item.itemImage" alt="{{ item.itemName }}">
+        <span> {{ item.itemName }} </span>
+        <span class="itemPrice">{{ item.itemPrice }}</span>
+
+    </div>
 </div>
