@@ -18,4 +18,10 @@ export class ItemService {
       observe: 'response',
     });
   }
+  getAllItems(options: any): Observable<any> {
+    return this.httpClient.get<any>(this.baseUrl + '/item', {
+      params: options,
+      observe: 'response',
+    });
+  }
 }
