@@ -23,6 +23,7 @@ import { ShopBodyComponent } from './components/shop-body/shop-body.component';
 import { ItemsComponent } from './components/items/items.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ShopFooterComponent } from './components/menunfooter/shop-footer/shop-footer.component';
+import { CartComponent } from './components/cart/cart/cart.component';
 
 
 const appRoutes: Routes = [
@@ -33,7 +34,7 @@ const appRoutes: Routes = [
   { path : 'men', component: MenComponent },
   { path : 'women', component: WomenComponent },
   { path : 'kids', component: KidsComponent },
-  { path : 'cart', component: CartcounterComponent },
+  { path : 'cart', component: CartComponent },
   { path : 'shopbody', component: ShopBodyComponent }
 ];
 @NgModule({
@@ -50,7 +51,8 @@ const appRoutes: Routes = [
     CartcounterComponent,
     ShopBodyComponent,
     ItemsComponent,
-    ShopFooterComponent
+    ShopFooterComponent,
+    CartComponent
   ],
   imports: [
     BrowserModule,
