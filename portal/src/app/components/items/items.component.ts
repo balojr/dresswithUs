@@ -12,7 +12,6 @@ import { ItemService } from 'src/app/services/item-service.service';
 export class ItemsComponent  implements OnInit{
   items: Item[] | undefined;
 
-
   constructor(private http: HttpClient, public itemService: ItemService, private cartService: CartService) { }
 
   ngOnInit(): void {
@@ -22,8 +21,9 @@ export class ItemsComponent  implements OnInit{
   getItems(): void {
     this.itemService.getItems().subscribe(items => this.items = items);
   }
-  addToCart(item: Item) {
+  addToCart(item: Item): void {
     this.cartService.addToCart(item);
+    console.log('Item added to cart successfully!');
   }
-  
+
 }
