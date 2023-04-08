@@ -6,3 +6,32 @@
   font-weight:  bold;
   margin: 20px 0px 10px 0px;
 }
+.cart-items-container{
+  .cart-item{
+    display: flex;
+    flex-direction: row;
+    .item-image{
+      img{
+        height: 25vh;
+        width: 25vh;
+      }
+    }
+    .cart-item-details{
+      display: flex;
+      flex-direction: column;
+      margin: 0px 0px 0px 20px;
+      .item-name{
+        font-size: 20px;
+        font-weight: bold;
+      }
+      .item-price{
+        font-size: 20px;
+        font-weight: bold;
+      }
+      .item-quantity{
+        font-size: 20px;
+        font-weight: bold;
+      }
+    }
+  }
+}

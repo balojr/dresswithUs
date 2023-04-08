@@ -12,22 +12,19 @@ export class CartComponent implements OnInit{
   items: Item[] = [];
   cartItems$!: Observable<Item[]>;
   total: number = 0;
+  totalItems: number = 0;
   constructor(private cartService: CartService) {  }
 
   ngOnInit(): void {
-    // this.items = this.cartService.getItems();
-    // this.cartItems$ = this.cartService.cartItems$;
-    // this.total = this.cartService.calculateTotal();
     this.cartItems$ = this.cartService.cartItems$;
     this.cartItems$.subscribe((items) => {
       this.items = this.cartService.getItems();
       this.total = this.cartService.calculateTotal();
     });
+    this.cartService.cartItemCount$.subscribe(count => {
+      this.totalItems = count;
+    });
   }
-  // clearCart() {
-  //   this.items = this.cartService.getItems();
-  // }
-
   clearCart() {
     this.cartService.clearCart$().subscribe(() => {
       this.items = [];

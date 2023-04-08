@@ -6,35 +6,29 @@
     <a routerLink="/shop" class="btn btn-primary">Go to Shop</a>
   </div>
   <div *ngFor="let item of items" class="cart-item">
-    <img [src]="item.itemImage" alt="{{ item.itemName }}" class="cart-item-image">
+    <div class="item-image">
+      <img [src]="item.itemImage" alt="{{ item.itemName }}" class="cart-item-image">
+    </div>
     <div class="cart-item-details">
       <div class="cart-item-name">{{ item.itemName }}</div>
       <div class="cart-item-price">Ksh {{ item.itemPrice }}</div>
       <div class="cart-item-quantity">
-        <button (click)="decreaseCartItem(item)" class="btn btn-light">
+        <button (click)="decreaseCartItem(item)" class="btn btn-light" [disabled]="item.quantity === 1">
           <i class="fas fa-minus"></i>
         </button>
         <span>{{ item.quantity }}</span>
-        <button (click)="increaseCartItem(item)" class="btn btn-light">
+        <button (click)="increaseCartItem(item)" class="btn btn-light" [disabled]="item.quantity === 10">
           <i class="fas fa-plus"></i>
         </button>
+        <button (click)="removeItem(item)" class="btn btn-danger" *ngIf="item.quantity === 1">
+          <i class="fas fa-trash-alt"></i>
+        </button>
       </div>
-      <button (click)="removeItem(item)" class="btn btn-danger">
-        <i class="fas fa-trash-alt"></i>
-      </button>
     </div>
   </div>
 </div>
+
+<span>{{ totalItems }} item(s)</span>
 <div class="total">{{ total }}</div>
-<!--<div class="cart-items-container">-->
-<!--    <div *ngIf="items.length === 0">No items in cart.</div>-->
-<!--    <div *ngFor="let item of items" class="cart-item">-->
-<!--        <img [src]="item.itemImage" alt="{{ item.itemName }}" class="cart-item-image">-->
-<!--        <div class="cart-item-details">-->
-<!--            <div class="cart-item-name">{{ item.itemName }}</div>-->
-<!--            <div class="cart-item-price">{{ item.itemPrice }}</div>-->
-<!--            <div class="cart-item-quantity">{{ item.quantity }}</div>-->
-<!--        </div>-->
-<!--    </div>-->
-<!--</div>-->
+
 <button *ngIf="items.length > 0" (click)="clearCart()">Clear Cart</button>
