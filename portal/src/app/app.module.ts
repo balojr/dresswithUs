@@ -24,6 +24,7 @@ import { ItemsComponent } from './components/items/items.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ShopFooterComponent } from './components/menunfooter/shop-footer/shop-footer.component';
 import { CartComponent } from './components/cart/cart/cart.component';
+import {NgOptimizedImage} from "@angular/common";
 
 
 const appRoutes: Routes = [
@@ -54,14 +55,15 @@ const appRoutes: Routes = [
     ShopFooterComponent,
     CartComponent
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    RouterModule.forRoot(appRoutes, { enableTracing: true }),
-    MatIconModule,
-    HttpClientModule,
-    HttpClientInMemoryWebApiModule.forRoot(InMemoryDataService, { dataEncapsulation: false })
-  ],
+    imports: [
+        BrowserModule,
+        AppRoutingModule,
+        RouterModule.forRoot(appRoutes, {enableTracing: true}),
+        MatIconModule,
+        HttpClientModule,
+        HttpClientInMemoryWebApiModule.forRoot(InMemoryDataService, {dataEncapsulation: false}),
+        NgOptimizedImage
+    ],
   providers: [],
   bootstrap: [AppComponent]
 })
