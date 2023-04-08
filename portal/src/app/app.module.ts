@@ -3,6 +3,9 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { RouterModule, Routes } from '@angular/router';
 import { MatIconModule } from '@angular/material/icon';
+import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
+// import { InMemoryDataService } from './in-memory-data.service';
+import { InMemoryDataService } from './services/in-memory-data.service';
 
 
 
@@ -17,6 +20,10 @@ import { WomenComponent } from './components/gender/women/women.component';
 import { KidsComponent } from './components/gender/kids/kids.component';
 import { CartcounterComponent } from './components/cart/cartcounter/cartcounter.component';
 import { ShopBodyComponent } from './components/shop-body/shop-body.component';
+import { ItemsComponent } from './components/items/items.component';
+import { HttpClientModule } from '@angular/common/http';
+import { ShopFooterComponent } from './components/menunfooter/shop-footer/shop-footer.component';
+import { CartComponent } from './components/cart/cart/cart.component';
 
 
 const appRoutes: Routes = [
@@ -27,7 +34,7 @@ const appRoutes: Routes = [
   { path : 'men', component: MenComponent },
   { path : 'women', component: WomenComponent },
   { path : 'kids', component: KidsComponent },
-  { path : 'cart', component: CartcounterComponent },
+  { path : 'cart', component: CartComponent },
   { path : 'shopbody', component: ShopBodyComponent }
 ];
 @NgModule({
@@ -42,13 +49,18 @@ const appRoutes: Routes = [
     WomenComponent,
     KidsComponent,
     CartcounterComponent,
-    ShopBodyComponent
+    ShopBodyComponent,
+    ItemsComponent,
+    ShopFooterComponent,
+    CartComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     RouterModule.forRoot(appRoutes, { enableTracing: true }),
-    MatIconModule
+    MatIconModule,
+    HttpClientModule,
+    HttpClientInMemoryWebApiModule.forRoot(InMemoryDataService, { dataEncapsulation: false })
   ],
   providers: [],
   bootstrap: [AppComponent]

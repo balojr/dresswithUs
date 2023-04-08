@@ -1,0 +1,42 @@
+.itemcontainer {
+    display: flex;
+    // flex-direction: row;
+    flex-wrap: wrap;
+    .item {
+        display: flex;
+        flex-direction: column;
+        font-family: 'Inter', sans-serif;
+        margin: 10px 10px 10px 10px;
+        position: relative;
+        img {
+            height: 25vh;
+            width: 25vh;
+            // height: 155px;
+        }
+        .addtocart {
+            position: absolute;
+            background-color: #bc0f0f;
+            border: none;
+            color: rgb(0, 0, 0);
+            padding: 10px 10px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+            border-radius: 5px;
+            font-weight: bold;
+            bottom: 50px;
+            left: 30px;
+        }
+        span {
+            font-size: 15px;
+            font-weight: 500;
+        }
+        .itemPrice {
+            font-size: 16px;
+            font-weight: bold;
+        }
+    }
+}
