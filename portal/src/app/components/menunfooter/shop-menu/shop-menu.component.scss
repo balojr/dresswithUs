@@ -106,12 +106,14 @@
             .cart {
                 display: flex;
                 align-items: center;
+                margin-left: 1vw;
                 a {
                     text-decoration: none;
                     color: #000000;
                 }
-                i {
-                    font-size: 25px;
+                img {
+                    // font-size: 25px;
+                    width: 30px;
                     margin-left: 5px;
                 }
                 span {
@@ -122,8 +124,8 @@
                     padding: 4px;
                     border-radius: 50%;
                     position: relative;
-                    top: -10px;
-                    left: -18px;
+                    top: -3px;
+                    left: -21px;
                 }
             }
         }
