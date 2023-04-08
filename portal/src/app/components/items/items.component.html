@@ -1,9 +1,9 @@
 <div class="itemcontainer">
     <div class="item" *ngFor="let item of items">
         <img [src]="item.itemImage" alt="{{ item.itemName }}">
-        <button class="addtocart" (click)="addToCart(item)">Add to Cart</button>
         <span> {{ item.itemName }} </span>
-        <span class="itemPrice">{{ item.itemPrice }}</span>
+        <span class="itemPrice">Ksh {{ item.itemPrice }}</span>
+      <button class="addtocart" (click)="addToCart(item)">Add to Cart</button>
 
     </div>
 </div>
