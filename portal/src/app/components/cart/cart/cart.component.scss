@@ -7,9 +7,16 @@
   margin: 20px 0px 10px 0px;
 }
 .cart-items-container{
+  margin-left: 50px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 85%;
   .cart-item{
+    font-family: 'Inter', sans-serif;
     display: flex;
     flex-direction: row;
+    margin-bottom: 10px;
     .item-image{
       img{
         height: 25vh;
@@ -17,20 +24,95 @@
       }
     }
     .cart-item-details{
-      display: flex;
       flex-direction: column;
       margin: 0px 0px 0px 20px;
       .item-name{
         font-size: 20px;
         font-weight: bold;
       }
-      .item-price{
-        font-size: 20px;
+      .cart-item-price{
+        font-size: 15px;
         font-weight: bold;
       }
-      .item-quantity{
+      .cart-item-quantity{
+        //add top and bottom margin
+        margin: 10px 0px 10px 0px;
         font-size: 20px;
         font-weight: bold;
+        button{
+          background: transparent;
+          border: none;
+          font-size: 20px;
+        }
+      }
+    }
+  }
+  .checkout{
+    font-family: 'Inter', sans-serif;
+    //background: #eceef3;
+    width: 40%;
+    border-radius: 5px;
+    .totalitems{
+      font-size: 20px;
+      margin: 10px 0px 10px 0px;
+      padding-bottom: 15px;
+      padding-left: 15px;
+      padding-right: 15px;
+      border-bottom: 1px solid #d9d0d0;
+      display: flex;
+      justify-content: space-between;
+    }
+    .total{
+      .top{
+        font-size: 20px;
+        margin: 10px 0px 10px 0px;
+        padding-bottom: 15px;
+        padding-left: 15px;
+        padding-right: 15px;
+        display: flex;
+        justify-content: space-between;
+        .cash{
+          font-weight: bold;
+        }
+      }
+      .bottom{
+        margin: 0 0 10px 0;
+        .button{
+          text-align: center;
+          button{
+            font-size: 20px;
+            font-weight: bold;
+            background: #060709;
+            color: #fff;
+            border: none;
+            height: 8vh;
+            width: 10vw;
+            border-radius: 30px;
+            margin-top: 10px;
+          }
+        }
+        .payment{
+          justify-content: center;
+          text-align: center;
+          margin-top: 20px;
+          .paymenttext{
+            font-size: 20px;
+          }
+          .payment-method{
+            display: flex;
+            flex-direction: row;
+            padding: 10px;
+            align-items: center;
+            justify-content: center;
+            .payment-method-icon{
+              margin: 10px;
+                i{
+                  font-size: 30px;
+                  color: #060709;
+                }
+            }
+          }
+        }
       }
     }
   }

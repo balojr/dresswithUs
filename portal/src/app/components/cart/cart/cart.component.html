@@ -1,34 +1,62 @@
 <app-shop-menu></app-shop-menu>
 <div class="maintext">My Cart</div>
 <div class="cart-items-container">
-  <div *ngIf="items.length === 0">
-    <span class="empty-cart">No items in cart.</span>
-    <a routerLink="/shop" class="btn btn-primary">Go to Shop</a>
-  </div>
-  <div *ngFor="let item of items" class="cart-item">
-    <div class="item-image">
-      <img [src]="item.itemImage" alt="{{ item.itemName }}" class="cart-item-image">
+  <div class="cart-item0">
+    <div *ngFor="let item of items" class="cart-item">
+      <div class="item-image">
+        <img [src]="item.itemImage" alt="{{ item.itemName }}" class="cart-item-image">
+      </div>
+      <div class="cart-item-details">
+        <div class="cart-item-name">{{ item.itemName }}</div>
+        <div class="cart-item-price">Ksh {{ item.itemPrice }}</div>
+        <div class="cart-item-quantity">
+          <button (click)="decreaseCartItem(item)" class="btn btn-light" [disabled]="item.quantity === 1">
+            <i class="fa-solid fa-circle-minus fa-shake" style="color: #060709;--fa-animation-duration: 2s"></i>
+          </button>
+          <span>{{ item.quantity }}</span>
+          <button (click)="increaseCartItem(item)" class="btn btn-light" [disabled]="item.quantity === 10">
+            <i class="fa-solid fa-circle-plus fa-bounce" style="color: #000000;--fa-animation-duration: 2s;"></i>
+          </button>
+          <button (click)="removeItem(item)" class="btn btn-danger" *ngIf="item.quantity === 1">
+            <i class="fas fa-trash-alt"></i>
+          </button>
+        </div>
+      </div>
     </div>
-    <div class="cart-item-details">
-      <div class="cart-item-name">{{ item.itemName }}</div>
-      <div class="cart-item-price">Ksh {{ item.itemPrice }}</div>
-      <div class="cart-item-quantity">
-        <button (click)="decreaseCartItem(item)" class="btn btn-light" [disabled]="item.quantity === 1">
-          <i class="fas fa-minus"></i>
-        </button>
-        <span>{{ item.quantity }}</span>
-        <button (click)="increaseCartItem(item)" class="btn btn-light" [disabled]="item.quantity === 10">
-          <i class="fas fa-plus"></i>
-        </button>
-        <button (click)="removeItem(item)" class="btn btn-danger" *ngIf="item.quantity === 1">
-          <i class="fas fa-trash-alt"></i>
-        </button>
+  </div>
+
+  <div class="checkout">
+    <div class="totalitems"><span>{{ totalItems }} item(s)</span> <span>Ksh {{ total }}</span></div>
+    <div class="total">
+      <div class="top">      <span>Total</span><span class="cash">{{ total }}</span></div>
+      <div class="bottom">
+        <div class="button">
+          <a routerLink="/pay" class="btn btn-primary">
+            <button>Checkout</button>
+          </a>
+        </div>
+        <div class="payment">
+          <span class="paymenttext">Available Payment Options</span>
+          <div class="payment-method">
+            <div class="payment-method-icon">
+              <i class="fa-brands fa-cc-paypal"></i>
+            </div>
+            <div class="payment-method-icon">
+              <i class="fab fa-cc-mastercard"></i>
+            </div>
+            <div class="payment-method-icon">
+              <i class="fab fa-cc-paypal"></i>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
 </div>
 
-<span>{{ totalItems }} item(s)</span>
-<div class="total">{{ total }}</div>
 
-<button *ngIf="items.length > 0" (click)="clearCart()">Clear Cart</button>
+<div *ngIf="items.length === 0">
+  <span class="empty-cart">No items in cart.</span>
+  <a routerLink="/shop" class="btn btn-primary">Go to Shop</a>
+</div>
+<button *ngIf="items.length > 0" (click)="clearCart()" [disabled]="items.length === 0">Clear Cart</button>
