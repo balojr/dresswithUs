@@ -25,6 +25,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { ShopFooterComponent } from './components/menunfooter/shop-footer/shop-footer.component';
 import { CartComponent } from './components/cart/cart/cart.component';
 import {NgOptimizedImage} from "@angular/common";
+import { PayComponent } from './components/pay/pay.component';
 
 
 const appRoutes: Routes = [
@@ -36,7 +37,8 @@ const appRoutes: Routes = [
   { path : 'women', component: WomenComponent },
   { path : 'kids', component: KidsComponent },
   { path : 'cart', component: CartComponent },
-  { path : 'shopbody', component: ShopBodyComponent }
+  { path : 'shopbody', component: ShopBodyComponent },
+  { path : 'pay', component: PayComponent }
 ];
 @NgModule({
   declarations: [
@@ -53,7 +55,8 @@ const appRoutes: Routes = [
     ShopBodyComponent,
     ItemsComponent,
     ShopFooterComponent,
-    CartComponent
+    CartComponent,
+    PayComponent
   ],
     imports: [
         BrowserModule,
